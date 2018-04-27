@@ -1,0 +1,10 @@
+{
+  "name": "soft-scroll",
+  "version": "0.0.1",
+  "description": "Scroll elements smoothly into view using CSS.",
+  "main": "soft-scroll.js",
+  "repository": "git@github.com:simplysh/soft-scroll.git",
+  "author": "Andrei Nemes <simply.andrei@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
