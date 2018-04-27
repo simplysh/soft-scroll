@@ -1,6 +1,6 @@
 # soft-scroll
 
-## [Try the demo!](https://simplysh.github.io/soft-scroll/)
+## [Online demo!](https://simplysh.github.io/soft-scroll/)
 
 ## Introduction
 
