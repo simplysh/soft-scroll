@@ -6,7 +6,7 @@
     module.exports = factory();
   }
   else {
-    root.flipScroll = factory();
+    root.softScroll = factory();
   }
 }(typeof self !== 'undefined' ? self : this, function () {
   var scrollIntoView = function (duration, element) {
