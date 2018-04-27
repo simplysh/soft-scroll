@@ -1,5 +1,7 @@
 # soft-scroll
 
+## [Try the demo!](https://simplysh.github.io/soft-scroll/)
+
 ## Introduction
 
 **soft-scroll** is a small library for animating scrollable viewports using CSS.
