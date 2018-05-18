@@ -18,7 +18,7 @@ Alternatively, just download and include [soft-scroll.js](./soft-scroll.js)
 <script src="soft-scroll.js"></script>
 ```
 
-## Usage
+## Prerequisites
 
 **soft-scroll** needs a wrapper element within the scrollable container to work:
 
@@ -31,11 +31,24 @@ container
     └── ..element n
 ```
 
-Using this structure, **soft-scroll** only needs the duration and element to be scrolled into view:
+## Usage
+
+```
+function softScroll(
+  duration: number | ((distance: number) => number),
+  element?: Node | Event
+): void { }
+```
+
+**soft-scroll** requires the animation duration and element to be scrolled into view:
 
 ```javascript
 softScroll(500, document.getElementById('target'));
 ```
+
+## Advanced usage
+
+### Currying
 
 The target element may be omitted, in which case **soft-scroll** will return a function that accepts it:
 
@@ -53,7 +66,19 @@ document
   .addEventListener('click', softScroll(500));
 ```
 
-In the case where an event is passed in, **soft-scroll** will detect and use the `target` property.
+In the case where an event is passed in as the second argument, **soft-scroll** will detect and use the `target` property.
+
+### Relative duration
+
+If the duration is a function, **soft-scroll** will call it and use the result. This function will receive the distance the container would travel as its first and only argument.
+
+This is useful for making the container move at constant speed regardless of the distance traveled
+
+```javascript
+const double = num => num * 2;
+
+softScroll(double, document.getElementById('target'));
+```
 
 ## Limitations
 
