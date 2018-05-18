@@ -62,7 +62,7 @@
         Array
           .from(document.querySelectorAll('.element'))
           .forEach(function(element) {
-            element.addEventListener('click', softScroll(500))
+            element.addEventListener('click', softScroll(distance => distance * 2.5))
           });
       }
     </script>
