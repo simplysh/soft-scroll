@@ -50,7 +50,7 @@ softScroll(500, document.getElementById('target'));
 
 ### Currying
 
-The target element may be omitted, in which case **soft-scroll** will return a function that accepts it:
+The target element may be omitted, in which case **soft-scroll** will return a function which accepts it:
 
 ```javascript
 const quickScroll = softScroll(500);
